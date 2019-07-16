@@ -1,0 +1,26 @@
+# E N D P O I N T S
+AGMExecutive.Endpoints=tcp -p 10198
+AGMCommonBehavior.Endpoints=tcp -p 11198
+AGMAgentTopic.Endpoints=tcp -p 12198
+
+# R E M O T E    P R O X I E S
+IceStormProxy = IceStorm/TopicManager:tcp -h localhost -p 9999
+
+# D S R  -  C O N F I G U R A T I O N
+AutostartAGGLPlannerServer = off
+DoNotPlan = True
+InitialModelPath =   /home/chris/robocomp/tools/AGM/AGGLPlanner/initialModel.xml
+
+# A G E N T S
+AGENTS = agenta,agentb
+agenta = agmcommonbehavior:tcp -h localhost -p 10330
+agentb = agmcommonbehavior:tcp -h localhost -p 10331
+
+# ZeroC-Ice parameters
+Ice.ThreadPool.Client.Size=50
+Ice.ThreadPool.Server.Size=50
+Ice.MessageSizeMax=2000480
+Ice.Override.ConnectTimeout=1000
+Ice.Override.CloseTimeout=1000
+Ice.Override.Timeout=1000
+

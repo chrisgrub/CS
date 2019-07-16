@@ -1,0 +1,65 @@
+<AGMModel>
+
+	<symbol id="1" type="robot">
+		<attribute value ="go" key="action"/>
+		<attribute value ="robot name" key="robot"/>
+	</symbol>
+
+	<symbol id="2" type="player1">
+		<attribute value ="player1 name" key="player1"/>
+	</symbol>
+
+	<symbol id="3" type="player2">
+		<attribute value ="player2 name" key="player2"/>
+	</symbol>
+
+	<symbol id="4" type="token">
+		<attribute value ="unknown" key="colour"/>
+	</symbol>
+
+	<symbol id="5" type="token">
+		<attribute value ="unknown" key="colour"/>
+	</symbol>
+
+	<symbol id="6" type="token">
+		<attribute value ="unknown" key="colour"/>
+	</symbol>
+
+	<symbol id="7" type="token">
+		<attribute value ="unknown" key="colour"/>
+	</symbol>
+
+	<symbol id="8" type="token">
+		<attribute value ="unknown" key="colour"/>
+	</symbol>
+
+	<symbol id="9" type="token">
+		<attribute value ="unknown" key="colour"/>
+	</symbol>
+
+	<symbol id="10" type="token">
+		<attribute value ="unknown" key="colour"/>
+	</symbol>
+
+	<symbol id="11" type="token">
+		<attribute value ="unknown" key="colour"/>
+	</symbol>
+
+	<symbol id="12" type="token">
+		<attribute value ="unknown" key="colour"/>
+	</symbol>
+
+	<link src="1" dst="2" label="plays_with" />
+	<link src="1" dst="3" label="plays_with" />
+	<link src="1" dst="4" label="has_token" />
+	<link src="1" dst="5" label="has_token" />
+	<link src="1" dst="6" label="has_token" />
+	<link src="2" dst="7" label="has_token" />
+	<link src="2" dst="8" label="has_token" />
+	<link src="2" dst="9" label="has_token" />
+	<link src="3" dst="10" label="has_token" />
+	<link src="3" dst="11" label="has_token" />
+	<link src="3" dst="12" label="has_token" />
+	
+
+</AGMModel>
