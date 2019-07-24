@@ -1,0 +1,9 @@
+Component navigation_agent
+{
+	Communications
+	{
+	};
+	language python;
+	options agmagent;
+};
+

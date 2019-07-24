@@ -9,12 +9,12 @@ IceStormProxy = IceStorm/TopicManager:tcp -h localhost -p 9999
 # D S R  -  C O N F I G U R A T I O N
 AutostartAGGLPlannerServer = off
 DoNotPlan = True
-InitialModelPath =   /home/chris/robocomp/tools/AGM/AGGLPlanner/initialModel.xml
+InitialModelPath =   /home/chris/devel/CS/initialModel.xml
 
 # A G E N T S
-AGENTS = agenta,agentb
-agenta = agmcommonbehavior:tcp -h localhost -p 10330
-agentb = agmcommonbehavior:tcp -h localhost -p 10331
+AGENTS = navigation,htn
+navigation` = agmcommonbehavior:tcp -h localhost -p 10330
+htn = agmcommonbehavior:tcp -h localhost -p 10331
 
 # ZeroC-Ice parameters
 Ice.ThreadPool.Client.Size=50

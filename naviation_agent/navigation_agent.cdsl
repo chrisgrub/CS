@@ -1,0 +1,12 @@
+import "DifferentialRobot.idsl";
+
+Component navigation_agent
+{
+	Communications
+	{
+		requires DifferentialRobot;
+	};
+	language python;
+	options agmagent;
+};
+

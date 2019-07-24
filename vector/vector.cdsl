@@ -1,0 +1,13 @@
+import "DifferentialRobot.idsl";
+import "ASRPublish.idsl";
+
+Component vector
+{
+	Communications
+	{
+		implements DifferentialRobot;
+		publishes ASRPublish;
+	};
+	language python;
+};
+
