@@ -1,4 +1,4 @@
-Component navigation_agent
+Component htn_agent
 {
 	Communications
 	{

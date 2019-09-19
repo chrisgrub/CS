@@ -1,0 +1,5 @@
+rcremoteserver
+
+rcmanagersimple deployment.xml 
+
+ps ux | grep PATTERN

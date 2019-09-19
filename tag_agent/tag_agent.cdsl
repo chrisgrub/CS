@@ -1,0 +1,12 @@
+import "AprilTags.idsl";
+
+Component tag_agent
+{
+	Communications
+	{
+		requires AprilTags;
+	};
+	language python;
+	options agmagent;
+};
+

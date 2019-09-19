@@ -1,5 +1,5 @@
 # Endpoints for implemented interfaces
-AGMCommonBehavior.Endpoints=tcp -p 10331
+AGMCommonBehavior.Endpoints=tcp -p 10332
 
 
 # Endpoints for subscriptions

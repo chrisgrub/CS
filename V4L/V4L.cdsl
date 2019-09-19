@@ -1,0 +1,13 @@
+import "CameraSimple.idsl";
+import "ASRPublish.idsl";
+
+Component V4L
+{
+	Communications
+	{
+		implements CameraSimple;
+		publishes ASRPublish;
+	};
+	language python;
+};
+

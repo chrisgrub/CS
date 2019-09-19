@@ -12,9 +12,10 @@ DoNotPlan = True
 InitialModelPath =   /home/chris/devel/CS/initialModel.xml
 
 # A G E N T S
-AGENTS = navigation,htn
-navigation` = agmcommonbehavior:tcp -h localhost -p 10330
+AGENTS = navigation,htn, tag
+navigation = agmcommonbehavior:tcp -h localhost -p 10330
 htn = agmcommonbehavior:tcp -h localhost -p 10331
+tag = agmcommonbehavior:tcp -h localhost -p 10332
 
 # ZeroC-Ice parameters
 Ice.ThreadPool.Client.Size=50

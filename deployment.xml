@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rcmanager>
+
+ <generalInformation>
+  <editor path="kate" dock="false" />
+  <timeouts fixed="1000.0" blink="300.0" />
+  <clicks switch="2.0" interval="400.0" />
+  <graph alpha="80.0" active="true" scale="200.0" />
+  <graphTiming idletime="1000.0" focustime="500.0" fasttime="10.0" fastperiod="2000.0" />
+  <simulation hookes="0.07" springlength="0.5" friction="0.4" step="0.5" fieldforce="20000.0" />
+ </generalInformation>
+
+ <node alias="IS" endpoint="IceStorm/TopicManager:default -p 9999">
+  <workingDir path="/home/robocomp/" />
+  <upCommand command="rcremote localhost rcnode /home/robocomp rcnode" />
+  <downCommand command="killall -9 icebox" />
+  <configFile path="kate /home/" />
+  <xpos value="-25.8301911866" />
+  <ypos value="-500.028452594" />
+  <radius value="10.0" />
+  <color value="#FF3333" />
+ </node>
+ 
+ <node alias="executive" endpoint="agmexecutive:tcp -h localhost -p 10198">
+  <dependence alias="IS" />
+  <workingDir path="/home/robocomp/" />
+  <upCommand command="rcremote localhost AGMExecutive /home/robocomp/AGM/tools/AGMExecutive_robocomp python AGMExecutive_robocomp.py /home/robocomp/devel/CS/config" />
+  <downCommand command="pkill -9 -f AGMExecutive_robocomp.py" />
+  <configFile path="xxx" />
+  <xpos value="12.147260719" />
+  <ypos value="-500.554632846" />
+  <radius value="10.0" />
+  <color value="#FF3333" />
+ </node>
+
+ <node alias="htn_agent" endpoint="AGMCommonBehavior:tcp -h localhost -p 10331">
+<!--   <dependence alias="IS" /> -->
+  <workingDir path="/home/robocomp/devel/CS/htn_agent" />
+  <upCommand command="rcremote localhost htn_agent /home/robocomp/devel/CS/htn_agent python2 src/htn_agent.py etc/config" />
+  <downCommand command="pkill -9 -f htn_agent" />
+  <configFile path="xxx" />
+  <xpos value="140" />
+  <ypos value="-350.554632846" />
+  <radius value="10.0" />
+  <color value="#FF3333" />
+ </node>
+
+<node alias="navigation_agent" endpoint="AGMCommonBehavior:tcp -h localhost -p 10330">
+<!--   <dependence alias="IS" /> -->
+  <workingDir path="/home/robocomp/devel/CS/navigation_agent" />
+  <upCommand command="rcremote localhost navigation_agent /home/robocomp/devel/CS/navigation_agent python2 src/navigation_agent.py etc/config" />
+  <downCommand command="pkill -9 -f navigation_agent" />
+  <configFile path="xxx" />
+  <xpos value="-100" />
+  <ypos value="-350.554632846" />
+  <radius value="10.0" />
+  <color value="#FF3333" />
+ </node>
+
+<node alias="tag_agent" endpoint="AGMCommonBehavior:tcp -h localhost -p 10332">
+<!--   <dependence alias="IS" /> -->
+  <workingDir path="/home/robocomp/devel/CS/tag_agent" />
+  <upCommand command="rcremote localhost tag_agent /home/robocomp/devel/CS/tag_agent python2 src/tag_agent.py etc/config" />
+  <downCommand command="pkill -9 -f tag_agent" />
+  <configFile path="xxx" />
+  <xpos value="50" />
+  <ypos value="-350.554632846" />
+  <radius value="10.0" />
+  <color value="#FF3333" />
+ </node>
+
+ <node alias="vector" endpoint="DifferentialRobot:tcp -h localhost -p 10004">
+  <dependence alias="navigation_agent" />
+  <workingDir path="/home/robocomp/devel/CS/vector" />
+  <upCommand command="rcremote localhost vector /home/robocomp/devel/CS/vector python2 src/vector.py etc/config" />
+  <downCommand command="pkill -9 -f vector" />
+  <configFile path="xxx" />
+  <xpos value="30" />
+  <ypos value="-250.554632846" />
+  <radius value="10.0" />
+  <color value="#FF3333" />
+ </node>
+
+ <node alias="V4L" endpoint="camerasimple:tcp -h localhost -p 10005">
+<!--   <dependence alias="IS" /> -->
+  <workingDir path="/home/robocomp/devel/CS/V4L" />
+  <upCommand command="rcremote localhost V4L /home/robocomp/devel/CS/V4L python2 src/V4L.py etc/config" />
+  <downCommand command="pkill -9 -f V4L" />
+  <configFile path="xxx" />
+  <xpos value="90" />
+  <ypos value="-250.554632846" />
+  <radius value="10.0" />
+  <color value="#FF3333" />
+ </node>
+
+ 
+
+</rcmanager>
